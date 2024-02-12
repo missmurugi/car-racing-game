@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Racing Game</title>
+    <style>
+        #container {
+            position: relative;
+            height: 100vh;
+            top: -19%;
+        }
+
+        .button_1,
+        .button_2,
+        .button_3,
+        .button_4 {
+            position: absolute;
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #ff6a00;
+            background-color: #ffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            left: 75%;
+            min-width: 300px;
+        }
+
+        .button_1 {
+            top: 200px;
+        }
+
+        .button_2 {
+            top: 300px;
+        }
+
+        .button_3 {
+            top: 400px;
+        }
+
+        .button_4 {
+            top: 500px;
+        }
+
+        .button_1:hover,
+        .button_2:hover,
+        .button_3:hover,
+        .button_4:hover {
+            background-color: #242120
+        }
+
+        .button_1:active,
+        .button_2:active,
+        .button_3:active,
+        .button_4:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .pic {
+            /* The image used */
+            background-image: url("rallycar.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        p {
+            top: -110px;
+            text-align: center;
+            color: black;
+            font-family: sans-serif;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic" id="container">
+        <p>CAR RACING GAME</p>
+        <button id="single_player" class="button_1">SINGLE PLAYER</button>
+        <button id="dual_player" class="button_2">DUAL PLAYER</button>
+        <button id="tutorial" class="button_3">TUTORIAL</button>
+        <button id="about" class="button_4">ABOUT</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("single_player").onclick = function () {
+            location.href = "Single_player.html";
+        };
+        document.getElementById("dual_player").onclick = function () {
+            location.href = "multi_player.html";
+        };
+        document.getElementById("tutorial").onclick = function () {
+            location.href = "tutorial.html";
+        };
+        document.getElementById("about").onclick = function () {
+            location.href = "about.html";
+        };
+    </script>
+</body>
+
+</html>
